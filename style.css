@@ -16,10 +16,13 @@ p {
   color: #a1d2d1;
 }
 
-.intro {
+.container {
   display: grid;
   place-content: center;
 
   height: 100vh;
   width: 100%;
+}
+.intro {
+  box-shadow: 0 0 1rem 0 hsl(200, 100%, 4%);
 }
