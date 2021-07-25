@@ -1,0 +1,150 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 100vh;
+  display: grid;
+  position: relative;
+  place-content: center;
+  text-align: center;
+  background-image: linear-gradient(hsl(51, 50%, 50%) 50%, hsl(51, 50%, 10%));
+  color: hsl(181, 100%, 10%);
+}
+.header-h1 {
+  position: relative;
+}
+.header-h1::before {
+  display: block;
+  position: absolute;
+  content: url(/logo.svg);
+  width: 6.25rem;
+  height: 6.25rem;
+  top: -3em;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-block: -2em 1em;
+  text-transform: capitalize;
+  font-size: 2.15rem;
+  font-weight: bold;
+}
+
+p,
+a,
+li {
+  font-size: 1.25rem;
+}
+.img {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  color: #3f3d56;
+}
+
+.skills,
+.contact,
+.contact a {
+  color: hsl(182, 35%, 95%);
+  text-decoration: none;
+  font-weight: 300;
+  width: 100%;
+}
+
+.skills {
+  width: 100%;
+  min-height: 10rem;
+  /* padding: 0 4em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+.contact {
+  position: relative;
+  margin-top: 2em;
+  /* padding-top: 2em; */
+  width: 100%;
+  min-height: 20rem;
+
+  display: grid;
+  gap: 1em;
+  place-content: center;
+
+  text-align: center;
+}
+.contact::before {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(
+    90deg,
+    hsl(51, 50%, 10%),
+    hsl(51, 50%, 50%),
+    hsl(51, 50%, 10%)
+  );
+  inset: 0;
+  width: 100%;
+  height: 0.25em;
+  filter: blur(0.1em);
+  -webkit-filter: blur(0.1em);
+}
+
+.email,
+.tel,
+.facebook,
+.instagram {
+  position: relative;
+  display: inline-block;
+}
+.email::before,
+.tel::before,
+.facebook::before,
+.instagram::before {
+  position: absolute;
+  display: inline-block;
+  content: url(/email.svg);
+  width: 1em;
+  height: 1em;
+  inset: 0 0 0 -1em;
+}
+
+.tel::before {
+  content: url(/whatsapp.svg);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.facebook::before {
+  content: url(/facebook-color.svg);
+  inset: 0;
+}
+.instagram::before {
+  content: url(/instagram-color.svg);
+  inset: 0;
+}
