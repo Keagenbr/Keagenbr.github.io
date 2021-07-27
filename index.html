@@ -5,21 +5,87 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700;900&display=swap');
 
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Jost, serif;
             background-color: hsl(51, 50%, 10%);
+        }
+
+        .nav::before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: hsl(51, 50%, 10%);
+            filter: blur(.075em);
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            height: fit-content;
+            z-index: 9999;
+            inset: 0;
+            top: .5em;
+
+        }
+
+        nav ul {
+            margin: auto 10%;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: hsl(182, 35%, 95%);
+
+        }
+
+        .scroll-down .nav {
+            opacity: 0;
+            transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -ms-transition: opacity .25s ease-in-out;
+            -o-transition: opacity .25s ease-in-out
+        }
+
+        .scroll-up .nav {
+            opacity: 1;
         }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <title>Keagenbr</title>
+    <link rel="shortcut icon" href="/assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/index.css">
+    <title>KeagenBR</title>
 
 </head>
 
 <body>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/CV/">CV</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1 class="header-h1">Keagen Robey</h1>
         <p>I am eager to learn new skills.</p>
@@ -111,7 +177,25 @@
 
     </div>
 
-
+    <script>
+        const body = document.body;
+        let lastScroll = 0;
+        window.addEventListener("scroll", () => {
+            const currntScroll = window.pageYOffset;
+            if (currntScroll <= 0) {
+                body.classList.remove("scroll-up");
+            }
+            if (currntScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up");
+                body.classList.add("scroll-down");
+            }
+            if (currntScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.add("scroll-up");
+                body.classList.remove("scroll-down");
+            }
+            lastScroll = currntScroll;
+        });
+    </script>
 </body>
 
 </html>
