@@ -7,112 +7,22 @@
 }
 #menuToggle {
   display: block;
-  position: relative;
-  top: 20px;
-  left: 50px;
-  width: max-content;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
 }
 #menuToggle input {
   display: block;
-  width: 40px;
-  height: 32px;
+  opacity: 0;
   position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
+  pointer-events: none;
 }
 #menuToggle span {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  margin-right: 0;
-  position: relative;
-
-  background: #373737;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: hsl(0, 0%, 94%);
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
   position: absolute;
-  inset: 0;
-  width: 100vw;
-  margin: -100px 0 0 -50px;
-  padding-top: 125px;
-
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-#menuToggle input:checked ~ .sidebar {
-  transform: none;
-}
-
-.sidebar,
-main {
-  margin-top: 2em;
+  pointer-events: none;
 }
 .sidebar {
   position: absolute;
+  width: 22rem;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -134,10 +44,11 @@ h1 {
 .sidebar h2,
 main h2 {
   color: var(--accent);
+  font-size: 2rem;
 }
 .sidebar h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
   line-height: 1;
   margin-block: 0.5em;
 }
@@ -156,6 +67,7 @@ main h2 {
 li,
 main p {
   font-weight: 100;
+  font-size: 1.25rem;
 }
 .right-way a {
   text-transform: none;
@@ -226,7 +138,8 @@ main p {
 
 main {
   padding-inline: 10%;
-  margin-bottom: 2em;
+  margin-block: 2em;
+  margin-left: 20rem;
 }
 main p,
 main li {
@@ -244,4 +157,18 @@ main div + div {
 }
 .experience h4 {
   text-transform: capitalize;
+}
+@media (min-width: 1000px) {
+  body {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .maxed {
+    position: relative;
+    max-width: 1000px;
+    height: 90vh;
+    margin: 0 auto;
+  }
 }

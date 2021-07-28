@@ -1,0 +1,156 @@
+header {
+  /* width: 100%; */
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr, 1fr;
+  gap: 4rem;
+  position: relative;
+  place-content: center;
+  text-align: center;
+  padding: 20% 0 0;
+  background-image: linear-gradient(hsl(51, 50%, 50%) 50%, hsl(51, 50%, 10%));
+  color: hsl(181, 100%, 10%);
+}
+.header-h1 {
+  position: relative;
+  width: max-content;
+}
+.header-h1::before {
+  display: block;
+  position: absolute;
+  content: url(/assets/logo.svg);
+  width: 6.25rem;
+  height: 6.25rem;
+  inset: 0;
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header p {
+  width: max-content;
+}
+.header-txt {
+  width: max-content;
+  /* grid-column: 1 / 2; */
+}
+
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  /* margin-block: -2em 1em; */
+  font-size: 4.3rem;
+  font-weight: bold;
+}
+
+p,
+a,
+li {
+  font-size: 2.25rem;
+}
+.img {
+  position: relative;
+  width: 100%;
+  /* grid-column: 2 / 3; */
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 2rem;
+}
+
+.skills,
+.contact,
+.contact a {
+  color: hsl(182, 35%, 95%);
+  text-decoration: none;
+  font-weight: 300;
+  width: 100%;
+}
+
+.skills {
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+.contact {
+  position: relative;
+  min-height: 20rem;
+
+  display: grid;
+  gap: 1em;
+  place-content: center;
+  text-align: left;
+}
+
+.email,
+.tel,
+.facebook,
+.instagram {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  height: max-content;
+}
+.email::before,
+.tel::before,
+.facebook::before,
+.instagram::before {
+  position: absolute;
+  display: inline-block;
+  content: url(/assets/email.svg);
+  width: 1em;
+  height: 1em;
+  inset: 0.2em 0 0 -1.25em;
+}
+
+.tel::before {
+  content: url(/assets/whatsapp.svg);
+}
+
+.facebook::before {
+  content: url(/assets/facebook-color.svg);
+}
+.instagram::before {
+  content: url(/assets/instagram-color.svg);
+}
+
+@media (min-width: 60rem) {
+  header {
+    text-align: left;
+    padding: 0 20vw;
+  }
+  .header-h1::before {
+    top: -2em;
+    left: 0;
+    transform: translateX(0);
+  }
+  .header-txt {
+    grid-column: 1 / 2;
+  }
+  .img {
+    grid-column: 2 / 3;
+  }
+}
+@media (min-width: 2000px) {
+  section {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+}

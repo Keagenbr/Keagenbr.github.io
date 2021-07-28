@@ -3,7 +3,8 @@
 
 <head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700;900&display=swap');
+        @import url('https://keagenbr.co.zam/css2?family=Jost:wght@300;500;700;900&display=KeagenBR');
+
 
         *,
         ::before,
@@ -22,11 +23,19 @@
             position: fixed;
             width: max-content;
             height: max-content;
-            margin-left: 30%;
             z-index: 1;
-            inset: 0;
             top: .5em;
+            right: 2em;
         }
+
+        @media (min-width: 1000px) {
+            nav {
+                position: absolute;
+                top: -1em;
+                right: 0;
+            }
+        }
+
 
         nav ul {
             display: flex;
@@ -58,6 +67,37 @@
             background-color: currentColor;
         }
 
+        @media (min-width:44rem) {
+            nav a {
+                font-weight: 600;
+            }
+
+            nav a.active::after {
+                width: 0;
+            }
+
+            nav a::after {
+                position: absolute;
+                display: block;
+                content: '';
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: .1em;
+                background-color: currentColor;
+
+                transition: width .25s ease-in-out;
+            }
+
+            nav a:hover::after {
+                width: 100%;
+            }
+
+            nav a.active {
+                font-weight: 600;
+            }
+        }
+
         .scroll-down .nav {
             opacity: 0;
             transition: opacity .25s ease-in-out;
@@ -75,106 +115,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/CV.css">
+    <link rel="stylesheet" media="screen and (max-width:44rem)" href="/CV.css">
+    <link rel="stylesheet" media="screen and (min-width:44.0000001rem)" href="/CV-desktop.css">
     <title>KeagenBR CV</title>
+    <meta name="title" content="KeagenBR">
+    <meta name="description" content="I am a website developer, based in South Africa">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://keagenbr.co.za">
+    <meta property="og:title" content="KeagenBR">
+    <meta property="og:description" content="I am a front-end website developer based in South Africa">
+    <meta property="og:image" content="/assets/logo.svg">
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://keagenbr.co.za">
+    <meta property="twitter:title" content="KeagenBR">
+    <meta property="twitter:description" content="I am a front-end website developer based in South Africa">
+    <meta property="twitter:image" content="/assets/logo.svg">
 </head>
 
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a class="active" href="/CV/">CV</a></li>
-        </ul>
-    </nav>
-    <div id="menuToggle">
-        <label for="taggle" hidden></label>
-        <input type="checkbox" id="toggle">
-        <span></span>
-        <span></span>
-        <span></span>
 
-        <section id="menu" class="sidebar">
-            <h1>keagen robey</h1>
-            <div class="referees">
-                <h2>referees</h2>
-                <div class="right-way">
-                    <h4>right way plumbing</h4>
-                    <p>general worker</p>
-                    <a href="tel:+27312611486">031 261 1486</a>
-                    <a href="mailto:admin@rightway.plumbing">admin@rightway.plumbing</a>
+    <div class="maxed">
+        <nav class="nav">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a class="active" href="/CV/">CV</a></li>
+            </ul>
+        </nav>
+
+        <div id="menuToggle">
+            <label for="taggle" hidden></label>
+            <input type="checkbox" id="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <section id="menu" class="sidebar">
+                <h1>keagen robey</h1>
+                <div class="referees">
+                    <h2>referees</h2>
+                    <div class="right-way">
+                        <h4>right way plumbing</h4>
+                        <p>general worker</p>
+                        <a href="tel:+27312611486">031 261 1486</a><br />
+                        <a href="mailto:admin@rightway.plumbing">admin@rightway.plumbing</a>
+                    </div>
+                    <div class="ramsey-gardens">
+                        <h4>ramsey gardens</h4>
+                        <p>barista</p>
+                        <a href="tel:+27833848812">083 384 8812</a>
+                    </div>
                 </div>
-                <div class="ramsey-gardens">
-                    <h4>ramsey gardens</h4>
-                    <p>barista</p>
-                    <a href="tel:+27833848812">083 384 8812</a>
+                <div class="contact">
+                    <h2>contact</h2>
+                    <ul>
+                        <li>KwaZulu-Natal, Durban</li>
+                        <li><a href="tel:+27626685787">0626685787</a></li>
+                        <li><a href="mailto:robeykb@gmail.com">robeykb@gmail.com</a></li>
+                        <li><a href="https://keagenbr.co.zaagen_Robey">@Keagen_Robey</a></li>
+                        <li><a href="https://keagenbr.KeagenBRzam/keagen.robey.1/">/keagen.robey.1</a></li>
+                        <li><a href="https://keagenbr.KeagenBRzam/keagen_robey/">keagen.robey</a></li>
+                        <li><a href="https://keagenbr.KeagenBRzaagenbr/">keagenbr</a></li>
+                </div>
+            </section>
+        </div>
+
+        <main>
+            <div class="experience">
+                <h2>experience</h2>
+                <div class="barista">
+                    <h4>barista</h4>
+                    <p>Ramsey Gardens<span> | </span>2018 - 2019, KwaZulu-Natal, Port Edward</p>
+                    <p>Head Barista and Waiter.</p>
+                </div>
+                <div class="general">
+                    <h4>general worker</h4>
+                    <p>Right Way Plumbing<span> | </span>2019 - present, Durban</p>
+                    <p>General Worker.</p>
                 </div>
             </div>
-            <div class="contact">
-                <h2>contact</h2>
-                <ul>
-                    <li>KwaZulu-Natal, Durban</li>
-                    <li><a href="tel:+27626685787">0626685787</a></li>
-                    <li><a href="mailto:robeykb@gmail.com">robeykb@gmail.com</a></li>
-                    <li><a href="https://twitter.com/Keagen_Robey">@Keagen_Robey</a></li>
-                    <li><a href="https://web.facebook.com/keagen.robey.1/">/keagen.robey.1</a></li>
-                    <li><a href="https://www.instagram.com/keagen_robey/">keagen.robey</a></li>
-                    <li><a href="https://github.com/Keagenbr/">keagenbr</a></li>
-                </ul>
+            <div class="education">
+                <h2>education</h2>
+                <h4>GED Online</h4>
+                <p>GED Online Homeschooling<span> | </span>2019 - present</p>
+                <p>GED Online is an Amercan based education program, with a international matic.</p>
             </div>
-        </section>
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="skills-1">
+                    <h5>Restaurant Skills</h5>
+                    <ul>
+                        <li>Barista</li>
+                        <li>Waitering</li>
+                    </ul>
+                </div>
+                <div class="skills-2">
+                    <h5>General Worker Skills</h5>
+                    <ul>
+                        <li>Endurance</li>
+                        <li>Basic Plumbing</li>
+                    </ul>
+                </div>
+                <div class="skills-3">
+                    <h5>Website Development</h5>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
     </div>
-
-
-
-    <main>
-        <div class="experience">
-            <h2>experience</h2>
-            <div class="barista">
-                <h4>barista</h4>
-                <p>Ramsey Gardens<span> | </span>2018 - 2019, KwaZulu-Natal, Port Edward</p>
-                <p>Head Barista and Waiter.</p>
-            </div>
-            <div class="general">
-                <h4>general worker</h4>
-                <p>Right Way Plumbing<span> | </span>2019 - present, Durban</p>
-                <p>General Worker.</p>
-            </div>
-        </div>
-
-        <div class="education">
-            <h2>education</h2>
-            <h4>GED Online</h4>
-            <p>GED Online Homeschooling<span> | </span>2019 - present</p>
-            <p>GED Online is an Amercan based education program, with a international matic.</p>
-        </div>
-
-        <div class="skills">
-            <h2>Skills</h2>
-            <div class="skills-1">
-                <h5>Restaurant Skills</h5>
-                <ul>
-                    <li>Barista</li>
-                    <li>Waitering</li>
-                </ul>
-            </div>
-            <div class="skills-2">
-                <h5>General Worker Skills</h5>
-                <ul>
-                    <li>Endurance</li>
-                    <li>Basic Plumbing</li>
-                </ul>
-            </div>
-            <div class="skills-3">
-                <h5>Website Development</h5>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-        </div>
-    </main>
 
     <script>
         const body = document.body;
