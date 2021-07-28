@@ -185,30 +185,42 @@ main p {
   content: url(/assets/mobile-alt.svg);
   width: 1em;
   height: 1em;
+  top: 0.35em;
   left: -1.75em;
 }
 .contact li:nth-child(3):before {
   content: url(/assets/envelope.svg);
   width: 1.25em;
   height: 1.25em;
+  top: 0.35em;
   left: -1.75em;
 }
 .contact li:nth-child(4):before {
   content: url(/assets/twitter.svg);
   width: 1.25em;
   height: 1.25em;
+  top: 0.35em;
   left: -1.75em;
 }
 .contact li:nth-child(5):before {
   content: url(/assets/facebook.svg);
   width: 1.25em;
   height: 1.25em;
+  top: 0.35em;
   left: -1.75em;
 }
 .contact li:nth-child(6):before {
   content: url(/assets/instagram.svg);
   width: 1.25em;
   height: 1.25em;
+  top: 0.35em;
+  left: -1.75em;
+}
+.contact li:nth-child(7):before {
+  content: url(/assets/github.svg);
+  width: 1.25em;
+  height: 1.25em;
+  top: 0.35em;
   left: -1.75em;
 }
 
