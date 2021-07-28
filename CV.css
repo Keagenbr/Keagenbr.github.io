@@ -10,6 +10,7 @@
   position: relative;
   top: 20px;
   left: 50px;
+  width: max-content;
 
   z-index: 1;
 
@@ -36,6 +37,7 @@
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
+  margin-right: 0;
   position: relative;
 
   background: #373737;
@@ -88,6 +90,8 @@
  */
 #menu {
   position: absolute;
+  inset: 0;
+  width: 100vw;
   margin: -100px 0 0 -50px;
   padding-top: 125px;
 
@@ -95,7 +99,6 @@
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
-  /* transform-origin: 0% 0%; */
   transform: translate(-100%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -115,9 +118,8 @@ main {
   flex-direction: column;
   background-color: var(--accent-bg);
   color: var(--main-txt);
-  width: 100%;
-  height: fit-content;
-  padding: 0 10%;
+  height: 110.75vh;
+  padding: 0 0.75rem;
 }
 .sidebar a {
   text-decoration: none;
@@ -212,10 +214,17 @@ main p {
 
 main {
   padding-inline: 10%;
+  margin-bottom: 2em;
 }
-main p {
-  color: var(--primary-txt-txt);
-  line-height: 1;
+main p,
+main li {
+  color: var(--primary-txt);
+  line-height: 1.25;
+  font-weight: 300;
+}
+main h4 + p,
+main h5 + li {
+  padding-top: 0.25em;
 }
 
 main div + div {
