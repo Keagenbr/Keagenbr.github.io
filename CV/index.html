@@ -128,14 +128,23 @@
     <meta property="og:url" content="https://keagenbr.co.za">
     <meta property="og:title" content="KeagenBR">
     <meta property="og:description" content="I am a front-end website developer based in South Africa">
-    <meta property="og:image" content="/assets/favicon-32x32.png">
+    <meta property="og:image" content="https://keagenbr.co.za/assets/logo.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://keagenbr.co.za">
     <meta property="twitter:title" content="KeagenBR">
     <meta property="twitter:description" content="I am a front-end website developer based in South Africa">
-    <meta property="twitter:image" content="/assets/favicon-32x32.png">
+    <meta property="twitter:image" content="https://keagenbr.co.za/assets/logo.svg">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CC0GC59LD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8CC0GC59LD');
+    </script>
 </head>
 
 <body>
@@ -143,7 +152,7 @@
     <div class="maxed">
         <nav class="nav">
             <ul>
-                <li><a href="/index">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a class="active" href="/CV/">CV</a></li>
             </ul>
         </nav>
@@ -202,7 +211,7 @@
                 <h2>education</h2>
                 <h4>GED Online</h4>
                 <p>GED Online Homeschooling<span> | </span>2019 - present</p>
-                <p>GED Online is an Amercan based education program, with a international matic.</p>
+                <p>GED Online is an American based education program, with a international matric.</p>
             </div>
             <div class="skills">
                 <h2>Skills</h2>
@@ -236,19 +245,19 @@
         const body = document.body;
         let lastScroll = 0;
         window.addEventListener("scroll", () => {
-            const currntScroll = window.pageYOffset;
-            if (currntScroll <= 0) {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
                 body.classList.remove("scroll-up");
             }
-            if (currntScroll > lastScroll && !body.classList.contains("scroll-down")) {
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
                 body.classList.remove("scroll-up");
                 body.classList.add("scroll-down");
             }
-            if (currntScroll < lastScroll && body.classList.contains("scroll-down")) {
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
                 body.classList.add("scroll-up");
                 body.classList.remove("scroll-down");
             }
-            lastScroll = currntScroll;
+            lastScroll = currentScroll;
         });
     </script>
 </body>
