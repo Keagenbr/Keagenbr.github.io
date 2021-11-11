@@ -53,6 +53,7 @@ main h2 {
   margin-block: 0.5em;
 }
 .right-way,
+.coffee-tree,
 .ramsey-gardens {
   margin-block: 0.5em 1em;
   text-transform: capitalize;
@@ -64,6 +65,8 @@ main h2 {
 .right-way a,
 .ramsey-gardens p,
 .ramsey-gardens a,
+.coffee-tree p,
+.coffee-tree a,
 li,
 main p {
   font-weight: 100;
