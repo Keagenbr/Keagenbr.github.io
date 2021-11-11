@@ -8,8 +8,9 @@ header {
   place-content: center;
   text-align: center;
   padding: 20% 0 0;
-  background-image: linear-gradient(hsl(51, 50%, 50%) 50%, hsl(51, 50%, 10%));
-  color: hsl(181, 100%, 10%);
+  background-image: linear-gradient(hsl(207, 98%, 47%) 50%, hsl(240, 100%, 9%));
+  color: hsl(239, 100%, 8%);
+  text-shadow: 1px 0.5px 10px hsl(187, 100%, 83%);
 }
 .header-h1 {
   position: relative;
