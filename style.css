@@ -1,0 +1,89 @@
+:root {
+  --main-bg: hsl(190, 20%, 96%);
+  --text-clr: hsl(190, 100%, 10%);
+  --card-bg: hsla(190, 100%, 24%, 0.4);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-clr);
+  background-color: var(--main-bg);
+  margin: 0 5%;
+}
+
+header h1 {
+  font-size: 6em;
+  text-align: center;
+  line-height: 86.5%;
+  letter-spacing: 4.5%;
+  margin: 0.25em auto;
+}
+
+header p,
+.cv p {
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 0.25em;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cv p {
+  padding-top: 1em;
+}
+.cv button a {
+  text-decoration: none;
+  color: var(--text-clr);
+  font-size: 1.3em;
+}
+.cv button {
+  width: 5rem;
+  height: 2rem;
+  margin-top: 0.25rem;
+  background-color: hsl(190, 100%, 32%);
+  border: none;
+  border-radius: 2.75em;
+  transition: ease-in-out 0.25s;
+}
+.cv button:hover {
+  outline: 1px solid hsl(190, 100%, 32%);
+}
+
+.card ul {
+  list-style: none;
+}
+.card ul li {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.card h2 {
+  font-size: 1.75em;
+  font-weight: 900;
+}
+.card {
+  background-color: var(--card-bg);
+  box-shadow: 1px 1px 5px var(--card-bg);
+  margin: 1em 10% 0;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  margin-block: 1em;
+}
