@@ -9,7 +9,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cms": "pagescms",
     "format": "prettier --write .",
     "lint": "eslint .",
     "check": "astro check && tsc --noEmit"
