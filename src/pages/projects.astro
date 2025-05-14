@@ -1,9 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { getCollection } from "@pagescms/core";
-
-const projects = await getCollection("projects");
+import projects from "../Content/projects.json";
 ---
 
 <MainLayout title="Projects" description="My portfolio projects">

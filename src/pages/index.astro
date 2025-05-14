@@ -1,9 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { getCollection } from "@pagescms/core";
+import projects from "../Content/projects.json";
 
-const featuredProjects = (await getCollection("projects")).slice(0, 3);
+const featuredProjects = projects.slice(0, 3);
 ---
 
 <MainLayout title="Home" description="Professional portfolio of Your Name">
@@ -18,7 +18,7 @@ const featuredProjects = (await getCollection("projects")).slice(0, 3);
           inspire.
         </p>
         <div class="mt-10 flex gap-4">
-          <a href="/projects" class="btn-primary"> View My Work </a>
+          <a href="/projects" class="btn-primary"> View My Work</a>
           <a
             href="/contact"
             class="px-6 py-3 border border-dark-cyan text-dark-cyan rounded-lg font-heading font-semibold hover:bg-dark-cyan/10 transition-colors"
@@ -39,7 +39,7 @@ const featuredProjects = (await getCollection("projects")).slice(0, 3);
       </div>
 
       <div class="mt-12 text-center">
-        <a href="/projects" class="btn-primary"> View All Projects </a>
+        <a href="/projects" class="btn-primary"> View All Projects</a>
       </div>
     </div>
   </section>
