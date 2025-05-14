@@ -1,0 +1,46 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getCollection } from "@pagescms/core";
+
+const featuredProjects = (await getCollection("projects")).slice(0, 3);
+---
+
+<MainLayout title="Home" description="Professional portfolio of Your Name">
+  <section class="py-20 md:py-32">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-heading font-bold leading-tight">
+          Hi, I'm <span class="text-dark-cyan">Your Name</span>
+        </h1>
+        <p class="mt-6 text-xl text-off-white/80">
+          I design and build exceptional digital experiences that engage and
+          inspire.
+        </p>
+        <div class="mt-10 flex gap-4">
+          <a href="/projects" class="btn-primary"> View My Work </a>
+          <a
+            href="/contact"
+            class="px-6 py-3 border border-dark-cyan text-dark-cyan rounded-lg font-heading font-semibold hover:bg-dark-cyan/10 transition-colors"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-dark-cyan/5">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-heading font-bold mb-12">Featured Work</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/projects" class="btn-primary"> View All Projects </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

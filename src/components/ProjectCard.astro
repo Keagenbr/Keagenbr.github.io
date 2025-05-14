@@ -1,0 +1,45 @@
+---
+// Define the Project type
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  tags: string[];
+  url: string; // Add this line
+};
+
+// Use the type for Astro.props
+const { project } = Astro.props as { project: Project };
+---
+
+<article class="card group">
+  <div class="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded">
+    <img
+      src={project.image}
+      alt={project.title}
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+      loading="lazy"
+    />
+  </div>
+
+  <h3 class="text-xl font-heading text-dark-cyan">{project.title}</h3>
+  <p class="mt-2 text-off-black/80">{project.description}</p>
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    {
+      project.tags.map((tag) => (
+        <span class="px-2 py-1 bg-dark-cyan/10 text-dark-cyan text-xs rounded-full">
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+
+  <a
+    href={project.url}
+    class="mt-6 inline-block text-dark-cyan font-medium hover:text-cyan-hover transition-colors"
+    aria-label={`View ${project.title} project`}
+  >
+    View Project →
+  </a>
+</article>

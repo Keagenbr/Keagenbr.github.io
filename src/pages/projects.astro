@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getCollection } from "@pagescms/core";
+
+const projects = await getCollection("projects");
+---
+
+<MainLayout title="Projects" description="My portfolio projects">
+  <section class="py-20">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-heading font-bold mb-12">My Projects</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --off-black: #1A1A1A;
+  --off-white: #F5F5F5;
+  --dark-cyan: #0E9D9D;
+  --cyan-hover: #0EB1B1;
+}
+
+body {
+  @apply bg-off-black text-off-white font-body;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-dark-cyan text-off-white px-6 py-3 rounded-lg font-heading font-semibold hover:bg-cyan-hover transition-colors;
+  }
+  
+  .card {
+    @apply bg-off-white p-6 rounded-lg border border-dark-cyan hover:shadow-lg transition-all;
+  }
+  
+  .input-field {
+    @apply bg-off-white/10 border border-dark-cyan/30 rounded px-4 py-3 text-off-white focus:outline-none focus:ring-2 focus:ring-dark-cyan;
+  }
+}

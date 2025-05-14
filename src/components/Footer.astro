@@ -1,0 +1,32 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+---
+
+<footer class="bg-off-black border-t border-dark-cyan/20 py-12">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-heading text-off-white mb-2">
+          Let's work together
+        </h3>
+        <p class="text-off-white/80">Based in Durban,South Africa</p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-end gap-4">
+        <a
+          href="mailto:robeykb@email.com"
+          class="text-dark-cyan hover:text-cyan-hover transition-colors"
+        >
+          robeykb@email.com
+        </a>
+        <SocialIcons />
+      </div>
+    </div>
+
+    <div
+      class="mt-12 pt-6 border-t border-dark-cyan/10 text-center text-off-white/60 text-sm"
+    >
+      &copy; {new Date().getFullYear()} Keagen Robey. All rights reserved.
+    </div>
+  </div>
+</footer>

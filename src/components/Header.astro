@@ -1,0 +1,49 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+---
+
+<header class="bg-off-black border-b border-dark-cyan/20">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-heading font-bold text-off-white">
+      YourName
+    </a>
+
+    <nav class="hidden md:flex gap-8">
+      <a href="/" class="text-off-white hover:text-dark-cyan transition-colors"
+        >Home</a
+      >
+      <a
+        href="/projects"
+        class="text-off-white hover:text-dark-cyan transition-colors">Work</a
+      >
+      <a
+        href="/about"
+        class="text-off-white hover:text-dark-cyan transition-colors">About</a
+      >
+      <a
+        href="/contact"
+        class="text-off-white hover:text-dark-cyan transition-colors">Contact</a
+      >
+    </nav>
+
+    <SocialIcons class="hidden md:flex" />
+
+    <button class="md:hidden text-off-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</header>

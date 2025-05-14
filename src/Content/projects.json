@@ -1,0 +1,35 @@
+[
+    {
+        "title": "E-commerce Platform",
+        "description": "A modern e-commerce solution with custom checkout flow and inventory management.",
+        "image": "/images/project1.jpg",
+        "tags": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ],
+        "url": "https://example.com"
+    },
+    {
+        "title": "Portfolio Website",
+        "description": "Minimalist portfolio design with CMS integration for easy content updates.",
+        "image": "/images/project2.jpg",
+        "tags": [
+            "Astro",
+            "Tailwind CSS",
+            "CMS"
+        ],
+        "url": "https://example.com"
+    },
+    {
+        "title": "Mobile App UI",
+        "description": "Fitness tracking app with custom animations and data visualization.",
+        "image": "/images/project3.jpg",
+        "tags": [
+            "Figma",
+            "React Native",
+            "UI Design"
+        ],
+        "url": "https://example.com"
+    }
+]
