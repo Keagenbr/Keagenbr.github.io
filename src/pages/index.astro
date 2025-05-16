@@ -9,22 +9,33 @@ const featuredProjects = projects.slice(0, 3);
 <MainLayout title="Home" description="Professional portfolio of Keagen">
   <section class="py-20 md:py-32">
     <div class="container mx-auto px-6">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-heading font-bold leading-tight">
-          Hi, I'm <span class="text-dark-cyan">Keagen</span>
-        </h1>
-        <p class="mt-6 text-xl text-off-black/80">
-          I design and build exceptional digital experiences that engage and
-          inspire.
-        </p>
-        <div class="mt-10 flex gap-4">
-          <a href="/projects" class="btn-primary"> View My Work</a>
-          <a
-            href="/contact"
-            class="px-6 py-3 border border-dark-cyan text-dark-cyan rounded-lg font-heading font-semibold hover:bg-dark-cyan/10 transition-colors"
-          >
-            Contact Me
-          </a>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- Intro Text -->
+        <div class="max-w-3xl flex-1">
+          <h1 class="text-4xl md:text-6xl font-heading font-bold leading-tight">
+            Hi, I'm <span class="text-dark-cyan">Keagen</span>
+          </h1>
+          <p class="mt-6 text-xl text-off-black/80">
+            I design and build exceptional digital experiences that engage and
+            inspire.
+          </p>
+          <div class="mt-10 flex gap-4">
+            <a href="/projects" class="btn-primary"> View My Work</a>
+            <a
+              href="/contact"
+              class="px-6 py-3 border border-dark-cyan text-dark-cyan rounded-lg font-heading font-semibold hover:bg-dark-cyan/10 transition-colors"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="flex-1 flex justify-center">
+          <img
+            src="/images/hero-bg.jpg"
+            alt="Keagen"
+            class="w-64 h-64 object-cover rounded-xl shadow-lg"
+          />
         </div>
       </div>
     </div>
