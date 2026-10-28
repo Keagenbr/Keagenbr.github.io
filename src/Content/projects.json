@@ -2,19 +2,19 @@
   {
     "title": "Lords and Legends",
     "description": "A family friendly restaurant.",
-    "image": "/images/project1.jpg",
+    "image": "/images/Lords&Legends.jxl",
     "tags": ["Family Friendly", "Pet Friendly", "Takeout"],
-    "url": "lords-zeta.vercel.app"
+    "url": "https://lords.app.keagenbr.co.za/"
   },
   {
-    "title": "Portfolio Website",
+    "title": "Stand IN",
     "description": "Minimalist portfolio design with CMS integration for easy content updates.",
     "image": "/images/project2.jpg",
     "tags": ["Astro", "Tailwind CSS", "CMS"],
     "url": "https://example.com"
   },
   {
-    "title": "Mobile App UI",
+    "title": "Stand IN",
     "description": "Fitness tracking app with custom animations and data visualization.",
     "image": "/images/project3.jpg",
     "tags": ["Figma", "React Native", "UI Design"],
